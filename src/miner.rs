@@ -17,7 +17,7 @@ pub struct NewMiner {
 }
 
 // database object: DAO (database access object)
-pub struct MinderDAO {
+pub struct MinerDAO {
     pub id: String,
     pub address: String,
     pub nickname: String,

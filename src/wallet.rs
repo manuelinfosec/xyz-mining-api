@@ -1,4 +1,5 @@
 use serde::{Deserialize, Serialize};
+use crate::miner::Miner;
 
 // json payload
 #[derive(Debug, Deserialize, Serialize)]
@@ -13,7 +14,7 @@ pub struct Wallet {
 
 // post request body for new miner
 #[derive(Debug, Deserialize, Serialize)]
-pub struct NewWalletRequst {
+pub struct NewWallet {
     club_name: String,
 }
 
