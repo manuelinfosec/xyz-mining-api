@@ -2,6 +2,7 @@ use {
     actix_web::HttpResponse,
     actix_web::web::Json,
     actix_web::get,
+    actix_web::post,
 
     crate::wallet::*,
     crate::util::*
@@ -33,6 +34,7 @@ pub async fn get_wallet() -> HttpResponse {
     }
 }
 
+#[post("/wallets")]
 pub async fn create_wallet(wallet_request: Json<NewWallet>) -> HttpResponse {
     /*
         TODO: Create a new WalletDAO object from request and write to DB
